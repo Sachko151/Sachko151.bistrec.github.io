@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Любимо място!</title>
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+   <link rel="icon" type="img/ico" href="favico.ico">
+</head>
+<body>
+	<ul>
+ <li><a class="active" href="index.html">Начало</a></li>
+  <li><a class="active2" href="page2.html">Локация</a></li>
+  <li><a class="active3" href="page3.html">История</a></li>
+  <li><a class="active4" href="page4.html">Еко Пътека</a></li>
+   </ul>
+   <div id="wrapper">
+<h1>Локация</h1>
+   	<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <a href="https://www.google.com/maps/place/3003+%D0%91%D0%B8%D1%81%D1%82%D1%80%D0%B5%D1%86,+Vratsa/@43.2219998,23.5040092,15z/data=!3m1!4b1!4m5!3m4!1s0x40ab189d44d1e47f:0x885d3f00b85b0c54!8m2!3d43.2214991!4d23.5131953" target="_blank"><img src="images/location.png" style="width:100%"></a>
+</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+    <div id="text">
+   	<p>Бистрец е кварталче намиращо се във Югозапад-ната част на Враца.</p>
+
+   		<p>Ето линка към Google Maps за по-подробни указания e във снимката.
+   	</div>
+   </div>
+
+   <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>

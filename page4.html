@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Любимо място!</title>
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+   <link rel="icon" type="img/ico" href="favico.ico">
+</head>
+<body>
+	<ul>
+  <li><a class="active" href="index.html">Начало</a></li>
+  <li><a class="active2" href="page2.html">Локация</a></li>
+  <li><a class="active3" href="page3.html">История</a></li>
+  <li><a class="active4" href="page4.html">Еко Пътека</a></li>
+   </ul>
+   <div id="wrapper">
+<h1>Еко Пътека</h1>
+   	<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/img7.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/img8.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/img9.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+    <div id="text">
+   	<p>Изходен пункт: кв. Бистрец Време за преминаване на маршрута: </p>
+
+   		<p> 2,5 часа Частта на маршрута, преминаваща през резерват "Врачанс­ки карст" е обявена за пътека за посетители от Министъра на околната среда и водите със Заповед № РД-928/07.09.2004 г. Маршрутът започва от Помпена станция на ВиК - Враца в квартал Бистрец. Върви се по широка пътека в западна посока към далекопровод високо напрежение, след което пътеката следва самия далекопровод, преминава се през стеснено карстово дере, оградено от двете страни с подобни на ритли ребра. В горната си част пътеката излиза от резервата в м. Костова ли­вада и се слива с туристически маршрут "Планинарство за на­чинаещи" в местността Влайна. При съединяването на двете пътеки се тръгва вляво (обратно на посоката на туристическия маршрут) към нискостоящ пре­вал, следвайки далекопроводните стълбове и след около 20 минути се достига хижа Леденика. </p>
+   	</div>
+   </div>
+
+   <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<footer><p>A site made by Sachko</p></footer>
+</body>
+</html>

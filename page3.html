@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Любимо място!</title>
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+   <link rel="icon" type="img/ico" href="favico.ico">
+</head>
+<body>
+	<ul>
+  <li><a class="active" href="index.html">Начало</a></li>
+  <li><a class="active2" href="page2.html">Локация</a></li>
+  <li><a class="active3" href="page3.html">История</a></li>
+  <li><a class="active4" href="page4.html">Еко Пътека</a></li>
+   </ul>
+   <div id="wrapper">
+<h1>История</h1>
+   	<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/img4.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/img5.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/img6.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+    <div id="text">
+   	<p> До 8 май 1971 г. Бистрец е самостоятелно село. С указ №757, обнародван на тази дата, Бистрец е слят административно с Враца и става негов квартал. </p>
+
+   		<p> В района на Бистрец са намерени случайно сребърни тетрадрахми от времето на цар Александър III Велики /Герасимов, Т., 1950, с. 319/. На север от квартала по левия бряг на р. Лева се издигат двадесетина тракийски надгробни могили, но те не са проучени. Някои от могилите се разорават с машини и на повърхността се показват камъни от гробница. В местността Мало Радовене се намират железни антични и средновековни оръдия. Около големия карстов извор в квартала се намират следи от средновековно селище и некропол. Според едно местно предание тук е имало манастир, който се наричал Св. Георги. При нашествието си турците го разрушили и днес от него е останал само един напрестолен камък с кръст. Макар, че твърде вероятно би било да е останал от разрушена средновековна църква. В друго местно предание се казва, че името на Бистрец е било името на карстовия извор, около който се заселило селото и с времето станало име и на квартала. </p>
+   	</div>
+   </div>
+
+   <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<footer><p>A site made by Sachko</p></footer>
+</body>
+</html>
